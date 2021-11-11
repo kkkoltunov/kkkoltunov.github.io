@@ -96,6 +96,10 @@ function AddPoints() {
     points.forEach((point) => SetPoint(point));
 }
 
+function ShowButton() {
+    document.getElementById("inputApprove").disabled = false;
+}
+
 function Redraw() {
     context.fillStyle = "#ffffff";
     context.fillRect(0, 0, canvas.width, canvas.height);
@@ -103,10 +107,18 @@ function Redraw() {
     CanvasSettings();
     DrawAxis(310, 310);
 
+    document.getElementById("inputA").value = input[0];
+    document.getElementById("inputB").value = input[1];
+    document.getElementById("inputC").value = input[2];
+
+    document.getElementById("inputApprove").disabled = true;
+
     let parabola = new Parabola(input[0], input[1], input[2]);
     for (let i = -10, timer = 0; i < 10; i += 0.005, timer += 0.00008) {
         setTimeout(DrawParabola, 1000 * timer, i, parabola);
     }
+
+    setTimeout(ShowButton, 1500);
 }
 
 function ChangeInputs() {
