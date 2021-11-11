@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+}
+
+canvas {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px dashed brown;
+    font-weight: 90;
+    color: purple;
+    margin-top: 10px;
+}
+
+.menu {
+    font: 20px Calibri;
+    text-align: center;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+    color: #3c763d;
+    background-color: #dff0d8;
+}
+
+.input-coefficient {
+    border-radius: 3px;
+    min-width: 10px;
+    display: inline;
+    text-align: center;
+}
